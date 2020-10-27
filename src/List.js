@@ -12,8 +12,7 @@ export default function list(props){
             {props.cards.map((card) =>
           <Card
             title={card.title}
-            content={card.content}
-            key={card.id}
+            content={card.content}key={card.id}
           />
         )}
             </div>
