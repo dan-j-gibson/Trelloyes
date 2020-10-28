@@ -9,3 +9,10 @@ it('TEST CODE #1: It renders w/o crashing', () => {
     // clean up code
     ReactDOM.unmountComponentAtNode(div);
 });
+
+it('SNAPSHOT: renders the UI as expected', () => {
+    const tree = renderer
+      .create(<Card name="Messages" unread={4}/>)
+      .toJSON();
+    expect(tree).toMatchSnapshot();  
+    });
